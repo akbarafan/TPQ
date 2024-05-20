@@ -35,7 +35,7 @@ const UsrSideNav = () => {
                 </Link>
               </li>
               
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link to="/userpage/materi" className="nav-link">
                 <i className="nav-icon fas fa-book"/>
                   <p className='ml-2'>
@@ -45,15 +45,15 @@ const UsrSideNav = () => {
               </li>
 
               <li className="nav-item">
-                <Link to="/userpage/presence" className="nav-link">
+                <Link to="/userpage/quiz" className="nav-link">
                 <i className="nav-icon fas fa-pencil"/>
                   <p className='ml-2'>
                     Quiz
                   </p>
                 </Link>
-              </li> */}
+              </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/userpage/presence" className="nav-link">
                 <i className="nav-icon fas fa-edit"/>
                   <p className='ml-2'>
@@ -69,7 +69,7 @@ const UsrSideNav = () => {
                     History Presence
                   </p>
                 </Link>
-              </li>              
+              </li>               */}
             </ul>
           </nav>
         </div>

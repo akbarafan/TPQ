@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
             $table->string('topic');
-            $table->string('description');
-            $table->date('deadline');
             $table->string('link');
+            $table->integer('id_category');
+            $table->dateTime('date');
             $table->timestamps();
         });
     }

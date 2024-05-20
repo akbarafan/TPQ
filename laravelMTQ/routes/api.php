@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MateriController;
 use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\QuizController;
 use App\Http\Controllers\RecapPresensiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewRecapController;
@@ -11,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('category', CategoryController::class);
 Route::apiResource('presensi', PresensiController::class);
 Route::apiResource('recap', RecapPresensiController::class);
+Route::apiResource('materi', MateriController::class);
+Route::apiResource('quiz', QuizController::class);
 
 
 

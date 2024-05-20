@@ -107,7 +107,7 @@ const UsrPresence = () => {
           
           <div class="row">
       {data.length === 0 ? (
-        <p>No open presensi available.</p>
+        <p>No open materi available.</p>
         ) : (
           data.map((item, index) => (
             

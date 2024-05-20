@@ -7,12 +7,15 @@ import MainPage from "./UI/MainPage";
 import TcrPage from "./UI/View/TeacherPage/TcrPage";
 import TcrMain from "./UI/View/TeacherPage/TeacherView/TcrMain";
 import TcrMakePresence from "./UI/View/TeacherPage/TeacherView/TcrMakePresence";
+import TcrMakeMateri from "./UI/View/TeacherPage/TeacherView/TcrMakeMateri";
 import TcrRecap from "./UI/View/TeacherPage/TeacherView/TcrRecap";
 import UsrMain from "./UI/View/UserPage/UserView/UsrMain";
 import UsrPresence from "./UI/View/UserPage/UserView/UsrPresence";
 import UsrPage from "./UI/View/UserPage/UsrPage";
 import UsrHistory from "./UI/View/UserPage/UserView/UsrHistory";
 import UsrMateri from "./UI/View/UserPage/UserView/UsrMateri";
+import TcrMakeQuiz from "./UI/View/TeacherPage/TeacherView/TcrMakeQuiz";
+import UsrQuiz from "./UI/View/UserPage/UserView/UsrQuiz";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'quiz',
-        element: <UsrPresence/>
+        element: <UsrQuiz/>
       },
       {
         path: 'presence',
@@ -70,6 +73,14 @@ const router = createBrowserRouter([
       {
         path: 'makePresence',
         element: <TcrMakePresence/>
+      },
+      {
+        path: 'makeMateri',
+        element: <TcrMakeMateri/>
+      },
+      {
+        path: 'makeQuiz',
+        element: <TcrMakeQuiz/>
       },
       {
         path: 'recap',

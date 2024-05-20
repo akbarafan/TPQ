@@ -14,19 +14,7 @@ const UsrMain = () => {
 
         <section class="content">
           <div class="container-fluid">
-
-            {/* <div class="row mb-4">
-              <div class="col-md-4">
-                <div className="card" >
-                  <div class="card-body">
-                    <h3 class="card-text mb-0">Tahfid</h3>
-                    <p class="card-text">Sutarno</p>
-                    <p class="card-text">Senin, 17.00 - 18.00</p>
-                    <a href="#" class="text-primary nav justify-content-end">Akses Presensi ➜</a>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+            
 
           <div class="row">
           <div class="col-12">

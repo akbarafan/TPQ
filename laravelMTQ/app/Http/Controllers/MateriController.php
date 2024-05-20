@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Materi;
 use App\Http\Requests\StoreMateriRequest;
 use App\Http\Requests\UpdateMateriRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class MateriController extends Controller
 {
@@ -13,7 +16,11 @@ class MateriController extends Controller
      */
     public function index()
     {
-        //
+        $index = DB::table('materis')
+        ->join('categories', 'materis.id_category', '=', 'categories.id')
+        ->select('materis.*', 'categories.name AS category')
+        ->get();
+        return response()->json(['data' => $index]);
     }
 
     /**
@@ -27,9 +34,27 @@ class MateriController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreMateriRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'topic' => 'required',
+            'link' => 'required',
+            'id_category' => 'required',
+            'date' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        $index = new Materi();
+        $index->topic = $request->topic;
+        $index->link = $request->link;
+        $index->id_category = $request->id_category;
+        $index->date = $request->date;
+        $index->save();
+
+        return response()->json(['data' => $index]);
     }
 
     /**

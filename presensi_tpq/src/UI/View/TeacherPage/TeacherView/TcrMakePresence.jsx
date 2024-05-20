@@ -74,6 +74,12 @@ const TcrMakePresence = () => {
     console.log(status)
   }, []);
 
+  const handleAlert = (e) => {
+    e.preventDefault();
+
+    alert("Anda sudah menambahkan presensi hari ini, buat kembali besok!");
+  }
+  
   const handleOn = (e) =>{
     e.preventDefault();
 
@@ -140,7 +146,7 @@ const TcrMakePresence = () => {
             </li>
           </ul>
 
-          {status ? <button onClick={handleOn} className={status == 0 ? "btn btn-success btn-block" : "btn btn-success btn-block disabled "}><b>Aktifkan Presensi</b></button> : <button onClick={handleOff} className="btn btn-danger btn-block"><b>Matikan Presensi</b></button>}
+          {status ? <button onClick={status == 0 ? handleOn : handleAlert} className={status == 0 ? "btn btn-success btn-block" : "btn btn-success btn-block disabled "}><b>Aktifkan Presensi</b></button> : <button onClick={handleOff} className="btn btn-danger btn-block"><b>Matikan Presensi</b></button>}
         </div>
       </div>
     </div>

@@ -36,6 +36,24 @@ const TcrSideNav = () => {
               </li>
               
               <li className="nav-item">
+                <Link to="/teacher/makeMateri" className="nav-link">
+                <i className="nav-icon fa fa-folder-open"/>
+                  <p className='ml-2'>
+                    Make Materi
+                  </p>
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/teacher/makeQuiz" className="nav-link">
+                <i className="nav-icon fa fa-pencil-square"/>
+                  <p className='ml-2'>
+                    Make Quiz
+                  </p>
+                </Link>
+              </li>
+
+              {/* <li className="nav-item">
                 <Link to="/teacher/makePresence" className="nav-link">
                 <i className="nav-icon fas fa-edit"/>
                   <p className='ml-2'>
@@ -51,7 +69,7 @@ const TcrSideNav = () => {
                     Recap Presence
                   </p>
                 </Link>
-              </li>              
+              </li>               */}
             </ul>
           </nav>
         </div>
